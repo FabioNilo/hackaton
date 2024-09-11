@@ -69,6 +69,67 @@ main {
     margin: 2rem auto;
     padding: 0 1rem;
 }
+.login-card {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.g-recaptcha {
+    margin-bottom: 1rem;
+}
+
+.forgot-password {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.forgot-password a {
+    color: var(--azul-medio);
+    text-decoration: none;
+}
+
+.login-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-buttons label {
+    display: flex;
+    align-items: center;
+}
+
+.login-buttons input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
 
 .card {
     background-color: var(--branco);
@@ -99,7 +160,30 @@ footer {
     width: 100%;
 }
 
+@media (max-width: 600px) {
+    .login-card {
+        padding: 1rem;
+    }
 
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .login-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .login-buttons button {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
 
 
 @media (max-width: 768px) {
