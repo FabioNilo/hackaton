@@ -69,6 +69,14 @@ main {
     margin: 2rem auto;
     padding: 0 1rem;
 }
+
+.main-login{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    justify-content: center;
+    display: flex;
+}
 .login-card {
     background-color: var(--branco);
     padding: 2rem;

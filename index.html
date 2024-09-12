@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Segurança Pública</title>
+    <title>Login - Portal de Segurança Pública</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header>
@@ -13,64 +12,31 @@
         <h1>Portal de Segurança Pública</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#formularios">Formulários</a></li>
-            <li><a href="#mapa">Mapa de Ocorrências</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+   <main class="main-login">
+    <div class="login-card">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
 
-    <main>
-        <section class="login-card">
-            <h2>Login</h2>
-            <form action="/login" method="POST">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required>
 
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
-
-                <!-- reCAPTCHA -->
-                <div class="g-recaptcha" data-sitekey="SUA_CHAVE_PUBLICA"></div>
-
-                <!-- Esqueci minha senha -->
-                <div class="forgot-password">
-                    <a href="#esqueci-senha">Esqueci minha senha</a>
-                </div>
-
-                <!-- Botões -->
-                <div class="login-buttons">
-                    <label>
-                        <input type="checkbox" name="lembrar"> Lembrar-me
-                    </label>
-                    <button type="submit" class="btn">Entrar</button>
-                </div>
-            </form>
-        </section>
-        <section id="inicio" class="card">
-            <h2>Bem-vindo ao Portal de Segurança Pública</h2>
-            <p>Este portal foi criado para facilitar a interação entre a sociedade e os órgãos de segurança pública.</p>
-        </section>
-
-        <section id="formularios" class="card">
-            <h2>Formulários</h2>
-            <p>Acesse nossos formulários para reportar ocorrências ou fazer sugestões.</p>
-            <button class="btn">Acessar Formulários</button>
-        </section>
-
-        <section id="mapa" class="card">
-            <h2>Mapa de Ocorrências</h2>
-            <p>Visualize os pontos quentes de criminalidade em nossa cidade.</p>
-            <div style="background-color: var(--cinza-claro); height: 300px; display: flex; justify-content: center; align-items: center;">
-                [Mapa será exibido aqui]
+            <div class="g-recaptcha">
+                [Simulação reCAPTCHA]
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Portal de Segurança Pública. Todos os direitos reservados.</p>
-    </footer>
+            <div class="login-buttons">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Lembrar</label>
+                <button type="submit" class="btn">Entrar</button>
+            </div>
+
+            <a href="#" class="forgot-password">Esqueci minha senha</a>
+        </form>
+    </div>
+   </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
